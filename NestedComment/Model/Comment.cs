@@ -1,13 +1,13 @@
-﻿
-public class Comment
+﻿class Comment
 {
     public int Id { get; set; }
-    public string? Content { get; set; }
-    public List<Comment> Replies { get; set; } = new List<Comment>();
+    public int? ParentId { get; set; }
+    public string Content { get; set; }
 
-    public Comment(int id, string? content)
+    public Comment(int id, int? parentId, string content)
     {
         Id = id;
+        ParentId = parentId;
         Content = content;
     }
 }
